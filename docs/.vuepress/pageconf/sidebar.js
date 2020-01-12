@@ -5,7 +5,9 @@ module.exports = {
       title: "基础",
       children: [
         "/js/b-hd/",
-        "/js/b-hd/one"
+        "/js/b-hd/one",
+        "/js/b-hd/two",
+        "/js/b-hd/three"
       ]
     },
     {

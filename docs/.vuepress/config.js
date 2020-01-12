@@ -10,7 +10,6 @@ module.exports = {
     nav: require("./pageconf/nav"),
     nextLinks: true,
     prevLinks: true,
-    displayAllHeaders: true,
     sidebarDepth: 2,
     lastUpdated: 'Last Updated',
     smoothScroll: true,
