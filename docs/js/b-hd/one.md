@@ -1,4 +1,4 @@
-# 第 1 章
+# 第 1 章 JavaScript简史
 ## 1.0 预览
 
 - JavaScript于1995年由Brendan Eich（布兰登 · 艾奇）完成开发；
