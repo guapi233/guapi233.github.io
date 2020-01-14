@@ -14,7 +14,20 @@ module.exports = {
       title: "设计模式",
       children: [
         "/js/b-dd/",
-        "/js/b-dd/one"
+        "/js/b-dd/one",
+        "/js/b-dd/two"
+      ]
+    }
+  ],
+
+  // 英语语法
+  "/english/": [
+    {
+      title: "英语语法",
+      children: [
+        "/english/",
+        "/english/one",
+        "/english/two",
       ]
     }
   ],
