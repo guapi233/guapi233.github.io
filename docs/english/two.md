@@ -2,7 +2,7 @@
 
 ## 预览
 
-![](./two/preview.png)
+![](./source/two/preview.png)
 
 
 
@@ -91,7 +91,7 @@ I don't (do not) have money.
   You have got light bulbs.
   => Have you got light bulbs?
   回答：Yes,I have./No,I'm haven't.
-   ```
+  ```
 
 * 提前情态动词（can、may、will等），主 + 情态动词 + 动词原形 + 其它  =>   情态动词 + 主 + 动词原形 + 其它
 

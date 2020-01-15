@@ -7,7 +7,8 @@ module.exports = {
         "/js/b-hd/",
         "/js/b-hd/one",
         "/js/b-hd/two",
-        "/js/b-hd/three"
+        "/js/b-hd/three",
+        "/js/b-hd/four"
       ]
     },
     {
@@ -15,7 +16,8 @@ module.exports = {
       children: [
         "/js/b-dd/",
         "/js/b-dd/one",
-        "/js/b-dd/two"
+        "/js/b-dd/two",
+        "/js/b-dd/three"
       ]
     }
   ],
@@ -28,6 +30,7 @@ module.exports = {
         "/english/",
         "/english/one",
         "/english/two",
+        "/english/three",
       ]
     }
   ],

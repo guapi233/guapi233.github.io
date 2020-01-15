@@ -81,7 +81,7 @@ getName(); // balabala
     	window.id = "window";
         
         document.getElementById("div1").onclick = function () {
-            alert("this.id"); // div1
+            alert(this.id); // div1
             
             var callback = function () {
                 alert(this.id); // window
@@ -96,7 +96,7 @@ getName(); // balabala
 
 ```js
 document.getElementById("div1").onclick = function () {
-    alert("this.id"); // div1
+    alert(this.id); // div1
 	
     var that = this; // 保留div1的引用
     
@@ -361,7 +361,7 @@ console.log(b.getName());
 
 函数的参数列表arguments是一个类数组对象，虽然它也有下标，但它并非真正的数组，不具备数组身上的方法，这时候我们就可以借用`Array.prototype`身上的方法。比如像往`arguments`身上添加新元素，可以借用数组身上的`push`方法，那么这种机制的内部实现原理是什么呢？下面V8中`Array.prototype.push`的源码：
 
-```
+```js
 function ArrayPush () {
 	var n = TO_UINT32(this.length); // 被push对象的length
 	var m = %_ArgumentsLength(); // push的参数个数
