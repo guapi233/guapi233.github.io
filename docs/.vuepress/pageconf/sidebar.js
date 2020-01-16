@@ -5,19 +5,20 @@ module.exports = {
       title: "基础",
       children: [
         "/js/b-hd/",
-        "/js/b-hd/one",
-        "/js/b-hd/two",
-        "/js/b-hd/three",
-        "/js/b-hd/four"
+        "/js/b-hd/01",
+        "/js/b-hd/02",
+        "/js/b-hd/03",
+        "/js/b-hd/04",
+        "/js/b-hd/05",
       ]
     },
     {
       title: "设计模式",
       children: [
         "/js/b-dd/",
-        "/js/b-dd/one",
-        "/js/b-dd/two",
-        "/js/b-dd/three"
+        "/js/b-dd/01",
+        "/js/b-dd/02",
+        "/js/b-dd/03"
       ]
     }
   ],
@@ -28,9 +29,10 @@ module.exports = {
       title: "英语语法",
       children: [
         "/english/",
-        "/english/one",
-        "/english/two",
-        "/english/three",
+        "/english/01",
+        "/english/02",
+        "/english/03",
+        "/english/04",
       ]
     }
   ],
