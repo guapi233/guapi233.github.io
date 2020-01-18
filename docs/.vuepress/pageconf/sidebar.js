@@ -18,7 +18,8 @@ module.exports = {
         "/js/b-dd/",
         "/js/b-dd/01",
         "/js/b-dd/02",
-        "/js/b-dd/03"
+        "/js/b-dd/03",
+        "/js/b-dd/04"
       ]
     }
   ],
@@ -33,6 +34,7 @@ module.exports = {
         "/english/02",
         "/english/03",
         "/english/04",
+        "/english/05"
       ]
     }
   ],
