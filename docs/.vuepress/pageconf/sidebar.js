@@ -10,6 +10,7 @@ module.exports = {
         "/js/b-hd/03",
         "/js/b-hd/04",
         "/js/b-hd/05",
+        "/js/b-hd/06",
       ]
     },
     {
@@ -19,7 +20,8 @@ module.exports = {
         "/js/b-dd/01",
         "/js/b-dd/02",
         "/js/b-dd/03",
-        "/js/b-dd/04"
+        "/js/b-dd/04",
+        "/js/b-dd/05",
       ]
     }
   ],
