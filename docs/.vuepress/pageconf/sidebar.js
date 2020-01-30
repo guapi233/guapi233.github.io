@@ -17,6 +17,7 @@ module.exports = {
         "/js/b-hd/10",
         "/js/b-hd/11",
         "/js/b-hd/12",
+        "/js/b-hd/13",
       ]
     },
     {
