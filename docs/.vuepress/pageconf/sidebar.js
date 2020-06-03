@@ -64,6 +64,16 @@ module.exports = {
     }
   ],
 
+  // 自考
+  "/diploma/": [
+    {
+      title: "马克思理论",
+      children: [
+        "/diploma/Marks/01",
+      ]
+    }
+  ],
+
   // 随笔
   "/other/": [
     ""
