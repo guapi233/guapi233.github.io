@@ -7,7 +7,9 @@
     'is-circle': circle
   }]"
   >
-    <span>
+    <i v-if="icon" :class="`icon-${ icon }`"></i>
+
+    <span v-if="$slots.default">
       <slot></slot>
     </span>
   </button>
@@ -32,6 +34,10 @@ export default {
     circle: {
       type: Boolean,
       default: false,
+    },
+    icon: {
+      type: String,
+      default: "",
     },
   },
 };
@@ -218,5 +224,10 @@ export default {
 .c-button.is-circle {
   border-radius: 50%;
   padding: 12px;
+}
+
+/* 添加icon后调整与文本的间距 */
+.c-button [class*="icon-"] + span {
+  margin-left: 5px;
 }
 </style>

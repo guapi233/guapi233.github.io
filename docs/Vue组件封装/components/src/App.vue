@@ -35,6 +35,15 @@
       <c-button type="warning" plain circle>55</c-button>
       <c-button type="danger" plain circle>66</c-button>
     </div>
+
+    <div class="row">
+      <c-button plain circle icon="calendar"></c-button>
+      <c-button type="primary" plain circle icon="chuang"></c-button>
+      <c-button type="success" plain circle icon="beibao"></c-button>
+      <c-button type="info" plain circle icon="xiangji"></c-button>
+      <c-button type="warning" plain circle icon="camera"></c-button>
+      <c-button type="danger" plain circle icon="charger"></c-button>
+    </div>
   </div>
 </template>
 
