@@ -1,5 +1,9 @@
 <template>
-  <div id="app">hello world</div>
+  <div id="app">
+    <c-button></c-button>
+    <c-button></c-button>
+    <c-button></c-button>
+  </div>
 </template>
 
 <script>
