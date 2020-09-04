@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <c-button @click="visible=true">按钮</c-button>
-    <c-dialog title="我是标题" width="70%" top="15px" :visible.sync="visible">
+    <c-dialog title="我是标题" :visible.sync="visible">
       <template v-slot:title>
         <h3>我是标题啊</h3>
       </template>

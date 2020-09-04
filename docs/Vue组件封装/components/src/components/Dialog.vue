@@ -1,24 +1,26 @@
 <template>
-  <div v-show="visible" class="c-dialog__wrapper" @click.self="handleClose">
-    <div class="c-dialog" :style="{ width, marginTop: top }">
-      <div class="c-dialog__header">
-        <slot name="title">
-          <span class="c-dialog__title">{{ title }}</span>
-        </slot>
-        <button class="c-dialog__headerbtn" @click="handleClose">
-          <i class="icon-close"></i>
-        </button>
-      </div>
+  <transition name="c-dialog">
+    <div v-show="visible" class="c-dialog__wrapper" @click.self="handleClose">
+      <div class="c-dialog" :style="{ width, marginTop: top }">
+        <div class="c-dialog__header">
+          <slot name="title">
+            <span class="c-dialog__title">{{ title }}</span>
+          </slot>
+          <button class="c-dialog__headerbtn" @click="handleClose">
+            <i class="icon-close"></i>
+          </button>
+        </div>
 
-      <div class="c-dialog__body">
-        <slot></slot>
-      </div>
+        <div class="c-dialog__body">
+          <slot></slot>
+        </div>
 
-      <div class="c-dialog__footer" v-if="$slots.footer">
-        <slot name="footer"></slot>
+        <div class="c-dialog__footer" v-if="$slots.footer">
+          <slot name="footer"></slot>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -50,7 +52,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+/* 基础样式 */
 .c-dialog__wrapper {
   position: fixed;
   top: 0;
@@ -114,5 +117,26 @@ export default {
       }
     }
   }
+}
+
+/* 过渡效果 */
+@keyframes fade {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.c-dialog-enter-active {
+  animation: fade 0.1s;
+}
+
+.c-dialog-leave-active {
+  animation: fade 0.1s reverse;
 }
 </style>
