@@ -1,6 +1,6 @@
 <template>
   <div class="c-dialog__wrapper">
-    <div class="c-dialog">
+    <div class="c-dialog" :style="{ width, marginTop: top }">
       <div class="c-dialog__header">
         <slot name="title">
           <span class="c-dialog__title">{{ title }}</span>
@@ -28,6 +28,14 @@ export default {
     title: {
       type: String,
       default: "提示",
+    },
+    width: {
+      type: String,
+      default: "30%",
+    },
+    top: {
+      type: String,
+      default: "15vh",
     },
   },
 };
