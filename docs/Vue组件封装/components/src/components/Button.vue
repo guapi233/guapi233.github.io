@@ -4,8 +4,11 @@
     :class="[`c-button--${type}`, {
     'is-plain': plain,
     'is-round': round,
-    'is-circle': circle
+    'is-circle': circle,
+    'is-disabled': disabled
   }]"
+    :disabled="disabled"
+    @click="handleClick"
   >
     <i v-if="icon" :class="`icon-${ icon }`"></i>
 
@@ -19,25 +22,41 @@
 export default {
   name: "CButton",
   props: {
+    // 按钮类型
     type: {
       type: String,
       default: "default",
     },
+    // 是否为朴素按钮
     plain: {
       type: Boolean,
       default: false,
     },
+    // 是否为圆角按钮
     round: {
       type: Boolean,
       default: false,
     },
+    // 是否为原形按钮
     circle: {
       type: Boolean,
       default: false,
     },
+    // 是否为icon按钮
     icon: {
       type: String,
       default: "",
+    },
+    // 是否开启禁用
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  methods: {
+    // 点击事件中转
+    handleClick(event) {
+      this.$emit("click", event);
     },
   },
 };
@@ -229,5 +248,106 @@ export default {
 /* 添加icon后调整与文本的间距 */
 .c-button [class*="icon-"] + span {
   margin-left: 5px;
+}
+
+/* 禁用状态样式 */
+.c-button.is-disabled,
+.c-button.is-disabled:hover,
+.c-button.is-disabled:focus {
+  color: #c0c4cc;
+  cursor: not-allowed;
+  background-color: #fff;
+  background-image: none;
+  border-color: #ebeef5;
+}
+
+.c-button--primary.is-disabled,
+.c-button--primary.is-disabled:active,
+.c-button--primary.is-disabled:focus,
+.c-button--primary.is-disabled:hover {
+  color: #fff;
+  background-color: #a0cfff;
+  border-color: #a0cfff;
+}
+
+.c-button--success.is-disabled,
+.c-button--success.is-disabled:active,
+.c-button--success.is-disabled:focus,
+.c-button--success.is-disabled:hover {
+  color: #fff;
+  background-color: #b3e19d;
+  border-color: #b3e19d;
+}
+
+.c-button--info.is-disabled,
+.c-button--info.is-disabled:active,
+.c-button--info.is-disabled:focus,
+.c-button--info.is-disabled:hover {
+  color: #fff;
+  background-color: #c8c9cc;
+  border-color: #c8c9cc;
+}
+
+.c-button--warning.is-disabled,
+.c-button--warning.is-disabled:active,
+.c-button--warning.is-disabled:focus,
+.c-button--warning.is-disabled:hover {
+  color: #fff;
+  background-color: #f3d19e;
+  border-color: #f3d19e;
+}
+
+.c-button--danger.is-disabled,
+.c-button--danger.is-disabled:active,
+.c-button--danger.is-disabled:focus,
+.c-button--danger.is-disabled:hover {
+  color: #fff;
+  background-color: #fab6b6;
+  border-color: #fab6b6;
+}
+
+.c-button--primary.is-plain.is-disabled,
+.c-button--primary.is-plain.is-disabled:active,
+.c-button--primary.is-plain.is-disabled:focus,
+.c-button--primary.is-plain.is-disabled:hover {
+  color: #8cc5ff;
+  background-color: #ecf5ff;
+  border-color: #d9ecff;
+}
+
+.c-button--success.is-plain.is-disabled,
+.c-button--success.is-plain.is-disabled:active,
+.c-button--success.is-plain.is-disabled:focus,
+.c-button--success.is-plain.is-disabled:hover {
+  color: #a4da89;
+  background-color: #f0f9eb;
+  border-color: #e1f3d8;
+}
+
+.c-button--info.is-plain.is-disabled,
+.c-button--info.is-plain.is-disabled:active,
+.c-button--info.is-plain.is-disabled:focus,
+.c-button--info.is-plain.is-disabled:hover {
+  color: #bcbec2;
+  background-color: #f4f4f5;
+  border-color: #e9e9eb;
+}
+
+.c-button--warning.is-plain.is-disabled,
+.c-button--warning.is-plain.is-disabled:active,
+.c-button--warning.is-plain.is-disabled:focus,
+.c-button--warning.is-plain.is-disabled:hover {
+  color: #f0c78a;
+  background-color: #fdf6ec;
+  border-color: #faecd8;
+}
+
+.c-button--danger.is-plain.is-disabled,
+.c-button--danger.is-plain.is-disabled:active,
+.c-button--danger.is-plain.is-disabled:focus,
+.c-button--danger.is-plain.is-disabled:hover {
+  color: #f9a7a7;
+  background-color: #fef0f0;
+  border-color: #fde2e2;
 }
 </style>

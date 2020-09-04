@@ -44,11 +44,39 @@
       <c-button type="warning" plain circle icon="camera"></c-button>
       <c-button type="danger" plain circle icon="charger"></c-button>
     </div>
+
+    <div class="row">
+      <c-button disabled>按钮</c-button>
+      <c-button type="primary" disabled>按钮</c-button>
+      <c-button type="success" disabled>按钮</c-button>
+      <c-button type="info" disabled>按钮</c-button>
+      <c-button type="warning" disabled>按钮</c-button>
+      <c-button type="danger" disabled>按钮</c-button>
+    </div>
+
+    <div class="row">
+      <c-button plain disabled>按钮</c-button>
+      <c-button type="primary" plain disabled>按钮</c-button>
+      <c-button type="success" plain disabled>按钮</c-button>
+      <c-button type="info" plain disabled>按钮</c-button>
+      <c-button type="warning" plain disabled>按钮</c-button>
+      <c-button type="danger" plain disabled>按钮</c-button>
+    </div>
+
+    <div class="row">
+      <c-button plain @click="action">点我</c-button>
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    action(event) {
+      alert("hjh");
+    },
+  },
+};
 </script>
 
 <style lang="scss">
