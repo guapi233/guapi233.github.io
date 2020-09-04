@@ -52,7 +52,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 /* 基础样式 */
 .c-dialog__wrapper {
   position: fixed;
@@ -112,7 +112,7 @@ export default {
       text-align: right;
       box-sizing: border-box;
 
-      .c-button:first-child {
+      ::v-deep .c-button:first-child {
         margin-right: 20px;
       }
     }
