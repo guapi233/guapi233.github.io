@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <c-dialog title="我是标题" width="70%" top="15px">
+    <c-button @click="visible=true">按钮</c-button>
+    <c-dialog title="我是标题" width="70%" top="15px" :visible.sync="visible">
       <template v-slot:title>
         <h3>我是标题啊</h3>
       </template>
@@ -9,7 +10,7 @@
         <input type="text" />
       </template>
       <template v-slot:footer>
-        <c-button>取消</c-button>
+        <c-button @click="visible=false">取消</c-button>
         <c-button type="primary">确认</c-button>
       </template>
     </c-dialog>
@@ -85,6 +86,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      visible: false,
+    };
+  },
   methods: {
     action(event) {
       alert("hjh");

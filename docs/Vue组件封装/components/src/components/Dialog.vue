@@ -1,11 +1,11 @@
 <template>
-  <div class="c-dialog__wrapper">
+  <div v-show="visible" class="c-dialog__wrapper" @click.self="handleClose">
     <div class="c-dialog" :style="{ width, marginTop: top }">
       <div class="c-dialog__header">
         <slot name="title">
           <span class="c-dialog__title">{{ title }}</span>
         </slot>
-        <button class="c-dialog__headerbtn">
+        <button class="c-dialog__headerbtn" @click="handleClose">
           <i class="icon-close"></i>
         </button>
       </div>
@@ -36,6 +36,15 @@ export default {
     top: {
       type: String,
       default: "15vh",
+    },
+    visible: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  methods: {
+    handleClose() {
+      this.$emit("update:visible", false);
     },
   },
 };
