@@ -4,6 +4,14 @@
       <template v-slot:title>
         <h3>我是标题啊</h3>
       </template>
+      <template>
+        heelow
+        <input type="text" />
+      </template>
+      <template v-slot:footer>
+        <c-button>取消</c-button>
+        <c-button type="primary">确认</c-button>
+      </template>
     </c-dialog>
 
     <!-- <div class="row">

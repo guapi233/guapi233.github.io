@@ -11,12 +11,11 @@
       </div>
 
       <div class="c-dialog__body">
-        <span>这是一段信息</span>
+        <slot></slot>
       </div>
 
-      <div class="c-dialog__footer">
-        <c-button>取消</c-button>
-        <c-button type="primary">确定</c-button>
+      <div class="c-dialog__footer" v-if="$slots.footer">
+        <slot name="footer"></slot>
       </div>
     </div>
   </div>
