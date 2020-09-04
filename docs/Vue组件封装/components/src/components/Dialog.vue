@@ -2,7 +2,9 @@
   <div class="c-dialog__wrapper">
     <div class="c-dialog">
       <div class="c-dialog__header">
-        <span class="c-dialog__title">提示</span>
+        <slot name="title">
+          <span class="c-dialog__title">{{ title }}</span>
+        </slot>
         <button class="c-dialog__headerbtn">
           <i class="icon-close"></i>
         </button>
@@ -23,6 +25,12 @@
 <script>
 export default {
   name: "CDialog",
+  props: {
+    title: {
+      type: String,
+      default: "提示",
+    },
+  },
 };
 </script>
 

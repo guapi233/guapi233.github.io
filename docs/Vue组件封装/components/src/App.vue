@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <c-dialog></c-dialog>
+    <c-dialog title="我是标题">
+      <template v-slot:title>
+        <h3>我是标题啊</h3>
+      </template>
+    </c-dialog>
 
     <!-- <div class="row">
       <c-button>11</c-button>
