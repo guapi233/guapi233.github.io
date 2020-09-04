@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <div class="row">
+    <c-dialog></c-dialog>
+
+    <!-- <div class="row">
       <c-button>11</c-button>
       <c-button type="primary">22</c-button>
       <c-button type="success">33</c-button>
@@ -65,7 +67,7 @@
 
     <div class="row">
       <c-button plain @click="action">点我</c-button>
-    </div>
+    </div>-->
   </div>
 </template>
 
