@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <c-button></c-button>
-    <c-button></c-button>
-    <c-button></c-button>
+    <c-button>11</c-button>
+    <c-button>22</c-button>
+    <c-button>33</c-button>
   </div>
 </template>
 

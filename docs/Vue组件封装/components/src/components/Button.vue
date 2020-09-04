@@ -1,5 +1,9 @@
 <template>
-  <button class="c-button">默认按钮</button>
+  <button class="c-button">
+    <span>
+      <slot></slot>
+    </span>
+  </button>
 </template>
 
 <script>
