@@ -3,6 +3,7 @@
     <span class="c-switch__core" ref="core">
       <span class="c-switch__button"></span>
     </span>
+    <input class="c-switch__input" type="checkbox" :name="name" />
   </div>
 </template>
 
