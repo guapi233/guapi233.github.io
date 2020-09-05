@@ -1,6 +1,12 @@
 <template>
   <div id="app">
-    <c-button @click="visible=true">按钮</c-button>
+    <!-- 😁:input -->
+    <div style="width: 300px;">
+      <c-input></c-input>
+    </div>
+
+    <!-- 😁:dialog -->
+    <!-- <c-button @click="visible=true">按钮</c-button>
     <c-dialog title="我是标题" :visible.sync="visible">
       <template v-slot:title>
         <h3>我是标题啊</h3>
@@ -13,8 +19,9 @@
         <c-button @click="visible=false">取消</c-button>
         <c-button type="primary">确认</c-button>
       </template>
-    </c-dialog>
+    </c-dialog>-->
 
+    <!-- 😁: 按钮 -->
     <!-- <div class="row">
       <c-button>11</c-button>
       <c-button type="primary">22</c-button>
