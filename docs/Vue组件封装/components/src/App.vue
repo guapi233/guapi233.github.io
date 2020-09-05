@@ -6,6 +6,8 @@
       <c-input placeholder="请输入账号"></c-input>
       <c-input placeholder="请输入密码" type="password"></c-input>
       <c-input disabled></c-input>
+      <c-input v-model="val"></c-input>
+      {{ val }}
     </div>
 
     <!-- 😁:dialog -->
@@ -99,6 +101,7 @@ export default {
   data() {
     return {
       visible: false,
+      val: "双向绑定",
     };
   },
   methods: {
