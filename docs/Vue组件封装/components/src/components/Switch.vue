@@ -10,20 +10,28 @@
 export default {
   name: "CSwitch",
   props: {
+    // 开关状态不
     value: {
       type: Boolean,
       default: false,
     },
+    name: {
+      type: String,
+      default: "",
+    },
+    // 开启状态颜色
     activeColor: {
       type: String,
       default: "",
     },
+    // 关闭状态颜色
     inactiveColor: {
       type: String,
       default: "",
     },
   },
   methods: {
+    // 状态切换
     async handleChange() {
       this.$emit("input", !this.value);
 
@@ -31,6 +39,7 @@ export default {
 
       this.setColor();
     },
+    // 设置颜色
     setColor() {
       if (this.activeColor || this.inactiveColor) {
         let newColor = this.value ? this.activeColor : this.inactiveColor;
