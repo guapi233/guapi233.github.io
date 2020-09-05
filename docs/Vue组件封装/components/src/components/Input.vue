@@ -1,12 +1,37 @@
 <template>
   <div class="c-input">
-    <input type="text" class="c-input__inner" />
+    <input
+      class="c-input__inner"
+      :type="type"
+      :class="{ 'is-disabled': disabled }"
+      :name="name"
+      :placeholder="placeholder"
+      :disabled="disabled"
+    />
   </div>
 </template>
 
 <script>
 export default {
   name: "CInput",
+  props: {
+    placeholder: {
+      type: String,
+      default: "",
+    },
+    type: {
+      type: String,
+      default: "text",
+    },
+    name: {
+      type: String,
+      default: "",
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+  },
 };
 </script>
 
@@ -37,6 +62,13 @@ export default {
     &:focus {
       outline: none;
       border-color: #409eff;
+    }
+
+    &.is-disabled {
+      background-color: #f5f7fa;
+      border-color: #e4e7ed;
+      color: #c0c4cc;
+      cursor: not-allowed;
     }
   }
 }

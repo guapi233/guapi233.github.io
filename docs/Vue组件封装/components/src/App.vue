@@ -3,6 +3,9 @@
     <!-- 😁:input -->
     <div style="width: 300px;">
       <c-input></c-input>
+      <c-input placeholder="请输入账号"></c-input>
+      <c-input placeholder="请输入密码" type="password"></c-input>
+      <c-input disabled></c-input>
     </div>
 
     <!-- 😁:dialog -->
