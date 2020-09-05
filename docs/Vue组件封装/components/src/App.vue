@@ -3,8 +3,8 @@
     <!-- 😁:input -->
     <div style="width: 300px;">
       <c-input></c-input>
-      <c-input placeholder="请输入账号"></c-input>
-      <c-input placeholder="请输入密码" type="password"></c-input>
+      <c-input placeholder="请输入账号" v-model="val" clearable></c-input>
+      <c-input placeholder="请输入密码" v-model="pass" type="password" showPassword></c-input>
       <c-input disabled></c-input>
       <c-input v-model="val"></c-input>
       {{ val }}
@@ -102,6 +102,7 @@ export default {
     return {
       visible: false,
       val: "双向绑定",
+      pass: "",
     };
   },
   methods: {

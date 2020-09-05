@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1722992",
+      "name": "关闭",
+      "font_class": "enempty",
+      "unicode": "e7be",
+      "unicode_decimal": 59326
+    },
+    {
+      "icon_id": "4922789",
+      "name": "eye-off",
+      "font_class": "eye-off",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "4922795",
+      "name": "eye",
+      "font_class": "eye",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
       "icon_id": "6204091",
       "name": "关  闭",
       "font_class": "close",
