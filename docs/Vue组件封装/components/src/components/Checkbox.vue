@@ -1,5 +1,5 @@
 <template>
-  <label class="c-checkbox" :class="{ 'is-checked': self }">
+  <label class="c-checkbox" :class="{ 'is-checked': isChecked }">
     <span class="c-checkbox__input">
       <span class="c-checkbox__inner"></span>
       <input
@@ -42,6 +42,12 @@ export default {
     // 是否被c-checkbox-group标签包裹
     hasGroup() {
       return !!this.checkboxGroup;
+    },
+    // 选中样式控制
+    isChecked() {
+      return this.hasGroup
+        ? this.checkboxGroup.value.includes(this.label)
+        : this.value;
     },
   },
   props: {

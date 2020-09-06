@@ -7,6 +7,7 @@ import CSwitch from "./components/Switch.vue";
 import CRadio from "./components/Radio.vue";
 import CRadioGroup from "./components/Radio-group.vue";
 import CCheckbox from "./components/Checkbox.vue";
+import CCheckboxGroup from "./components/Checkbox-group.vue";
 import "./assets/icon/iconfont.css";
 
 Vue.component(CButton.name, CButton);
@@ -16,6 +17,7 @@ Vue.component(CSwitch.name, CSwitch);
 Vue.component(CRadio.name, CRadio);
 Vue.component(CRadioGroup.name, CRadioGroup);
 Vue.component(CCheckbox.name, CCheckbox);
+Vue.component(CCheckboxGroup.name, CCheckboxGroup);
 
 Vue.config.productionTip = false;
 

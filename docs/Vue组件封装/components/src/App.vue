@@ -5,13 +5,14 @@
       <c-checkbox v-model="check">选择</c-checkbox>
       {{ check }}
     </div>
-    <!-- <div>
-      <c-checkbox-group v-model="rad2">
+    <div>
+      <c-checkbox-group v-model="check2">
         <c-checkbox label="0">男</c-checkbox>
         <c-checkbox label="1">女</c-checkbox>
+        <c-checkbox label="2">？</c-checkbox>
       </c-checkbox-group>
-      {{ rad2 }}
-    </div>-->
+      {{ check2 }}
+    </div>
 
     <!-- 😁:Radio -->
     <!-- <div>
@@ -137,6 +138,7 @@ export default {
       rad: "0",
       rad2: "0",
       check: false,
+      check2: ["0", "1"],
     };
   },
   methods: {
