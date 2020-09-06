@@ -1,7 +1,20 @@
 <template>
   <div id="app">
-    <!-- 😁:Radio -->
+    <!-- 😁:Checkbox -->
     <div>
+      <c-checkbox v-model="check">选择</c-checkbox>
+      {{ check }}
+    </div>
+    <!-- <div>
+      <c-checkbox-group v-model="rad2">
+        <c-checkbox label="0">男</c-checkbox>
+        <c-checkbox label="1">女</c-checkbox>
+      </c-checkbox-group>
+      {{ rad2 }}
+    </div>-->
+
+    <!-- 😁:Radio -->
+    <!-- <div>
       <c-radio label="0" v-model="rad">男</c-radio>
       <c-radio label="1" v-model="rad">女</c-radio>
       {{ rad }}
@@ -12,7 +25,7 @@
         <c-radio label="1">女</c-radio>
       </c-radio-group>
       {{ rad2 }}
-    </div>
+    </div>-->
 
     <!-- 😁:Switch -->
     <!-- <c-switch v-model="s" activeColor="red" inactiveColor="blue"></c-switch> -->
@@ -123,6 +136,7 @@ export default {
       s: false,
       rad: "0",
       rad2: "0",
+      check: false,
     };
   },
   methods: {
