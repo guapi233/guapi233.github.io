@@ -1,7 +1,10 @@
 <template>
   <div id="app">
+    <!-- 😁:Radio -->
+    <c-radio></c-radio>
+
     <!-- 😁:Switch -->
-    <c-switch v-model="s" activeColor="red" inactiveColor="blue"></c-switch>
+    <!-- <c-switch v-model="s" activeColor="red" inactiveColor="blue"></c-switch> -->
 
     <!-- 😁:input -->
     <!-- <div style="width: 300px;">
