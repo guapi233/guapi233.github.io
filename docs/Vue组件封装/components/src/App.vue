@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <!-- 😁:Radio -->
-    <c-radio label="0">男</c-radio>
+    <c-radio label="0" v-model="rad">男</c-radio>
+    <c-radio label="1" v-model="rad">女</c-radio>
 
+    {{ rad }}
     <!-- 😁:Switch -->
     <!-- <c-switch v-model="s" activeColor="red" inactiveColor="blue"></c-switch> -->
 
@@ -110,6 +112,7 @@ export default {
       val: "双向绑定",
       pass: "",
       s: false,
+      rad: "0",
     };
   },
   methods: {

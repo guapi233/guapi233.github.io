@@ -1,8 +1,8 @@
 <template>
-  <label class="c-radio" :class="{ 'is-checked': isChecked }" @click="isChecked=true">
+  <label class="c-radio" :class="{ 'is-checked': value === label }">
     <span class="c-radio__input">
       <span class="c-radio__inner"></span>
-      <input type="radio" class="c-radio__original" />
+      <input type="radio" class="c-radio__original" :name="name" :value="label" v-model="self" />
     </span>
 
     <span class="c-radio__label">
@@ -16,10 +16,15 @@
 <script>
 export default {
   name: "CRadio",
-  data() {
-    return {
-      isChecked: false,
-    };
+  computed: {
+    self: {
+      get() {
+        return this.value;
+      },
+      set(newVal) {
+        this.$emit("input", newVal);
+      },
+    },
   },
   props: {
     label: {
