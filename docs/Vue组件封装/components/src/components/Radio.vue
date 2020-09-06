@@ -1,15 +1,14 @@
 <template>
-  <label class="c-radio">
+  <label class="c-radio" :class="{ 'is-checked': isChecked }" @click="isChecked=true">
     <span class="c-radio__input">
       <span class="c-radio__inner"></span>
       <input type="radio" class="c-radio__original" />
     </span>
 
     <span class="c-radio__label">
-      woshi label
-      <!-- <slot></slot>
+      <slot></slot>
 
-      <template></template>-->
+      <template v-if="!$slots.default">{{ label }}</template>
     </span>
   </label>
 </template>
@@ -17,6 +16,21 @@
 <script>
 export default {
   name: "CRadio",
+  data() {
+    return {
+      isChecked: false,
+    };
+  },
+  props: {
+    label: {
+      default: "",
+    },
+    name: {
+      type: String,
+      default: "",
+    },
+    value: null,
+  },
 };
 </script>
 

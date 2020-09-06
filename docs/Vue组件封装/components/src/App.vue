@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- 😁:Radio -->
-    <c-radio></c-radio>
+    <c-radio label="0">男</c-radio>
 
     <!-- 😁:Switch -->
     <!-- <c-switch v-model="s" activeColor="red" inactiveColor="blue"></c-switch> -->
