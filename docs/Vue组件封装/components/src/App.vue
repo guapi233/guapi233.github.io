@@ -1,10 +1,19 @@
 <template>
   <div id="app">
     <!-- 😁:Radio -->
-    <c-radio label="0" v-model="rad">男</c-radio>
-    <c-radio label="1" v-model="rad">女</c-radio>
+    <div>
+      <c-radio label="0" v-model="rad">男</c-radio>
+      <c-radio label="1" v-model="rad">女</c-radio>
+      {{ rad }}
+    </div>
+    <div>
+      <c-radio-group v-model="rad2">
+        <c-radio label="0">男</c-radio>
+        <c-radio label="1">女</c-radio>
+      </c-radio-group>
+      {{ rad2 }}
+    </div>
 
-    {{ rad }}
     <!-- 😁:Switch -->
     <!-- <c-switch v-model="s" activeColor="red" inactiveColor="blue"></c-switch> -->
 
@@ -113,6 +122,7 @@ export default {
       pass: "",
       s: false,
       rad: "0",
+      rad2: "0",
     };
   },
   methods: {
