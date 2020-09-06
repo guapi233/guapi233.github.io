@@ -1,5 +1,5 @@
 <template>
-  <label class="c-radio" :class="{ 'is-checked': value === label }">
+  <label class="c-radio" :class="{ 'is-checked': self === label }">
     <span class="c-radio__input">
       <span class="c-radio__inner"></span>
       <input type="radio" class="c-radio__original" :name="name" :value="label" v-model="self" />
@@ -16,24 +16,39 @@
 <script>
 export default {
   name: "CRadio",
+  inject: {
+    radioGroup: {
+      default: null,
+    },
+  },
   computed: {
+    // 绑定值中转变量
     self: {
       get() {
-        return this.value;
+        return this.hasGroup ? this.radioGroup.value : this.value;
       },
       set(newVal) {
-        this.$emit("input", newVal);
+        this.hasGroup
+          ? this.radioGroup.$emit("input", newVal)
+          : this.$emit("input", newVal);
       },
+    },
+    // 是否被c-radio-group标签包裹
+    hasGroup() {
+      return !!this.radioGroup;
     },
   },
   props: {
+    // 单选框的label值
     label: {
       default: "",
     },
+    // 表单组件的name属性
     name: {
       type: String,
       default: "",
     },
+    // 双向绑定的值
     value: null,
   },
 };
