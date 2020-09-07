@@ -1,8 +1,8 @@
 {
-  "name": "vue-component-test-demo-01",
+  "name": "guapi01",
   "version": "0.1.0",
   "private": false,
-  "main": "./dist/vue-component-test-demo-01.umd.min.js",
+  "main": "./dist/guapi01.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
