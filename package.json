@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "vuepress": "^1.2.0"
+  },
+  "dependencies": {
+    "guapi01": "^0.1.0"
   }
 }
