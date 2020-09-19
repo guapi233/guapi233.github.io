@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>发送请求</button>
+  </body>
+  <script src="../node_modules/mockjs/dist/mock-min.js"></script>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script>
+    const btn = document.querySelector("button");
+
+    btn.addEventListener("click", (e) => {
+      $.ajax("http://baidu.com", {
+        success(data) {
+          console.log(data);
+        },
+      });
+    });
+
+    const dataObj = { aa: "11", bb: "33", cc: "22", dd: "44" };
+
+    Mock.mock("http://baidu.com", {
+      "user|1-3": [
+        {
+          "id|+1": 1,
+          name: "@cname",
+          "age|18-28": 0,
+          birthday: "@date('yyyy-MM-dd')",
+          city: "@city",
+          "fromObj|2": dataObj,
+        },
+      ],
+    });
+  </script>
+</html>
