@@ -175,3 +175,15 @@
   * isNew：是不是新文档
   * toJSON()：转换为JSON
   * toObject()：将document对象转换为普通JS对象，转化后就失去document的一切属性与方法了
+
+
+
+**指令操作前的钩子**
+
+```js
+UserSchema.pre('save', function (next) {
+  this.created = new Date()
+  next()
+})
+```
+
